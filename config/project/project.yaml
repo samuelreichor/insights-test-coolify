@@ -1,0 +1,60 @@
+dateModified: 1767973698
+email:
+  fromEmail: sam@gmail.com
+  fromName: Coolify
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  graphics:
+    hasUrls: true
+    name: Graphics
+    settings:
+      path: '@webroot/assets/graphics'
+    type: craft\fs\Local
+    url: '@web/assets/graphics'
+  images:
+    hasUrls: true
+    name: Images
+    settings:
+      path: '@webroot/assets/images'
+    type: craft\fs\Local
+    url: '@web/assets/images'
+meta:
+  __names__:
+    4cc91330-523b-4d54-911e-42c778da37d6: 'Default Contentbuilder' # Default Contentbuilder
+    06ad5f1e-770a-4155-826b-cf98e6908551: Default # Default
+    204c4f6a-d5d3-41d7-99cd-b54c856b3141: Graphics # Graphics
+    1723a27b-575b-4f9f-86ce-78e2bf638980: English # English
+    91459a15-28e3-4266-bf0b-a7103de4b3dd: 'Public Schema' # Public Schema
+    aafef6d1-4fa0-47fa-ae1a-2478348bbe43: Blog # Blog
+    c6042d8b-c4bf-490b-97f0-5809cd0e9390: Home # Home
+    ca23fe3a-c532-4ee4-9497-b7748360de16: Deutsch # Deutsch
+    cd17b7ef-0947-48a6-8b71-1e366fa396e8: 'Default Pagebuilder' # Default Pagebuilder
+    d67ba988-97bc-4e0b-8f59-35d69f9bd13b: Images # Images
+    e9a929d6-d4c1-4a37-bd97-58d9b1828917: News # News
+    e84941bb-b440-4d3a-b208-260206030821: Pages # Pages
+plugins:
+  genesis:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  insights:
+    edition: pro
+    enabled: true
+    schemaVersion: 1.0.1
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: true
+  name: Coolify
+  schemaVersion: 5.8.0.3
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

@@ -39,7 +39,8 @@ services:
         condition: service_healthy
     volumes:
       - assets_data:/app/web/assets
-    command: php craft queue/listen --verbose
+    entrypoint: []
+    command: ["php", "craft", "queue/listen", "--verbose"]
     restart: unless-stopped
 
 volumes:

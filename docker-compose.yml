@@ -30,7 +30,7 @@ services:
   queue:
     build:
       context: .
-      dockerfile: ./.coolify/Dockerfile
+      dockerfile: ./.coolify/Dockerfile.queue
       args:
         - php_version=8.2
         - node_version=22
@@ -39,8 +39,6 @@ services:
         condition: service_healthy
     volumes:
       - assets_data:/app/web/assets
-    entrypoint: []
-    command: ["php", "craft", "queue/listen", "--verbose"]
     restart: unless-stopped
 
 volumes:

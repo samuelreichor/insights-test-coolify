@@ -16,6 +16,7 @@
 !.env.example
 !.env.sh.example
 /storage
+!/storage/geoip/*
 /web/cpresources
 
 # COMPOSER

@@ -16,8 +16,8 @@ COPY . .
 # Build the frontend assets using the build script defined in package.json.
 RUN npm run build
 
-### Stage 2: CraftCMS + PHP
-FROM craftcms/nginx:${php_version}
+### Stage 2: CraftCMS + PHP (Base)
+FROM craftcms/nginx:${php_version} as base
 
 USER root
 
@@ -54,5 +54,12 @@ RUN mkdir -p /app/storage /app/web/cpresources /app/web/assets \
   && chown -R www-data:www-data /app/config /app/storage /app/web/cpresources /app/web/assets /app/.env \
   && chmod -R 775 /app/config /app/storage /app/web/cpresources /app/web/assets /app/.env
 
-# Switch back to the www-data user to run the Nginx web server.
 USER www-data
+
+### Stage 3: Web (default) - runs nginx + php-fpm via supervisord
+FROM base as web
+
+### Stage 4: Queue Worker - runs craft queue/listen
+FROM base as queue
+ENTRYPOINT []
+CMD ["php", "craft", "queue/listen", "--verbose"]

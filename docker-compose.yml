@@ -18,6 +18,7 @@ services:
     build: # Specifies how to build the Docker image
       context: .
       dockerfile: ./.coolify/Dockerfile # Specifies the path to the Dockerfile
+      target: web # Build target stage
       args: # Passes build arguments to the Dockerfile
         - php_version=8.2 # Sets the PHP version
         - node_version=22 # Sets the Node.js version
@@ -30,7 +31,8 @@ services:
   queue:
     build:
       context: .
-      dockerfile: ./.coolify/Dockerfile.queue
+      dockerfile: ./.coolify/Dockerfile
+      target: queue
       args:
         - php_version=8.2
         - node_version=22

@@ -3494,12 +3494,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/samuelreichor/craft-insights.git",
-                "reference": "858280aac6538a3644723e290a172fb1064c989d"
+                "reference": "246453ff640865503adb60d546ec6c8d135cf28d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/samuelreichor/craft-insights/zipball/858280aac6538a3644723e290a172fb1064c989d",
-                "reference": "858280aac6538a3644723e290a172fb1064c989d",
+                "url": "https://api.github.com/repos/samuelreichor/craft-insights/zipball/246453ff640865503adb60d546ec6c8d135cf28d",
+                "reference": "246453ff640865503adb60d546ec6c8d135cf28d",
                 "shasum": ""
             },
             "require": {
@@ -3538,7 +3538,7 @@
                 "rss": "https://github.com/samuelreichor/craft-insights/releases.atom",
                 "source": "https://github.com/samuelreichor/craft-insights"
             },
-            "time": "2026-01-10T20:09:30+00:00"
+            "time": "2026-01-10T20:18:26+00:00"
         },
         {
             "name": "seld/cli-prompt",

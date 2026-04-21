@@ -3,10 +3,10 @@
   "prefer-stable": true,
   "require": {
     "php": "^8.2",
-    "craftcms/cms": "5.9.5",
+    "craftcms/cms": "^5.9.20",
     "nystudio107/craft-vite": "5.0.1",
     "samuelreichor/craft-genesis": "^1.1.0",
-    "samuelreichor/craft-insights": "dev-dev",
+    "samuelreichor/craft-insights": "^1",
     "vlucas/phpdotenv": "5.6.1"
   },
   "require-dev": {

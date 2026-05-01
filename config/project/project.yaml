@@ -1,4 +1,4 @@
-dateModified: 1776795240
+dateModified: 1776795458
 email:
   fromEmail: sam@gmail.com
   fromName: Coolify
@@ -40,6 +40,7 @@ plugins:
   insights:
     edition: pro
     enabled: true
+    licenseKey: NGSLF6O8GBEDQVJSHXNQLFFL
     schemaVersion: 1.2.0
   vite:
     edition: standard

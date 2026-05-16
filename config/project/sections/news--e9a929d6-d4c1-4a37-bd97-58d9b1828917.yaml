@@ -3,16 +3,16 @@ enableVersioning: true
 entryTypes:
   -
     uid: cd17b7ef-0947-48a6-8b71-1e366fa396e8 # Default Pagebuilder
-  -
-    uid: 4cc91330-523b-4d54-911e-42c778da37d6 # Default Contentbuilder
 handle: news
 maxAuthors: 2
+minAuthors: 1
 name: News
 previewTargets:
   -
     label: 'Primary entry page'
+    refresh: '1'
     urlFormat: '{url}'
-propagationMethod: none
+propagationMethod: all
 siteSettings:
   1723a27b-575b-4f9f-86ce-78e2bf638980: # English
     enabledByDefault: true

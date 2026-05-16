@@ -1,0 +1,21 @@
+{# >>> Comp Settings #}
+{% set compDefaults = {
+  data: {
+    name: 'c-text',
+    text: '',
+  },
+} %}
+{# >>> Merge data / classes / variansts (optional) #}
+{% set props = {
+  data: data is defined and data is iterable ? compDefaults.data | merge(data) : compDefaults.data,
+} %}
+
+<section class="{{ props.data.name }} py-12 md:py-16">
+  <div class="mx-auto max-w-3xl px-6">
+    {% if props.data.text %}
+      <div class="c-richtext text-neutral-800 leading-relaxed">
+        {{ props.data.text | raw }}
+      </div>
+    {% endif %}
+  </div>
+</section>

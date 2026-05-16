@@ -1,0 +1,31 @@
+{# >>> Comp Settings #}
+{% set compDefaults = {
+  data: {
+    name: 'c-image',
+    image: null,
+  },
+} %}
+{# >>> Merge data / classes / variansts (optional) #}
+{% set props = {
+  data: data is defined and data is iterable ? compDefaults.data | merge(data) : compDefaults.data,
+} %}
+
+<section class="{{ props.data.name }} py-12 md:py-16">
+  <div class="mx-auto max-w-5xl px-6">
+    {% if props.data.image %}
+      <figure>
+        <img
+          src="{{ props.data.image.getUrl() }}"
+          alt="{{ props.data.image.alt ?? props.data.image.title }}"
+          class="w-full h-auto rounded-xl shadow"
+          loading="lazy"
+        >
+        {% if props.data.image.title %}
+          <figcaption class="mt-3 text-sm text-neutral-500 text-center">
+            {{ props.data.image.title }}
+          </figcaption>
+        {% endif %}
+      </figure>
+    {% endif %}
+  </div>
+</section>

@@ -1,0 +1,8 @@
+columnSuffix: null
+handle: llmSettings
+instructions: null
+name: 'LLM Settings'
+searchable: false
+translationKeyFormat: null
+translationMethod: language
+type: samuelreichor\llmify\fields\LlmifySettingsField

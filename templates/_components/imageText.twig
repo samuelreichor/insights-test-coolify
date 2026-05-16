@@ -1,0 +1,42 @@
+{# >>> Comp Settings #}
+{% set compDefaults = {
+  data: {
+    name: 'c-imageText',
+    headline: '',
+    text: '',
+    image: null,
+  },
+} %}
+{# >>> Merge data / classes / variansts (optional) #}
+{% set props = {
+  data: data is defined and data is iterable ? compDefaults.data | merge(data) : compDefaults.data,
+} %}
+
+<section class="{{ props.data.name }} py-12 md:py-16">
+  <div class="mx-auto max-w-6xl px-6 grid gap-10 md:grid-cols-2 items-center">
+    {% if props.data.image %}
+      <div>
+        <img
+          src="{{ props.data.image.getUrl() }}"
+          alt="{{ props.data.image.alt ?? props.data.headline }}"
+          class="w-full h-auto rounded-xl shadow"
+          loading="lazy"
+        >
+      </div>
+    {% endif %}
+
+    <div>
+      {% if props.data.headline %}
+        <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-neutral-900">
+          {{ props.data.headline }}
+        </h2>
+      {% endif %}
+
+      {% if props.data.text %}
+        <div class="c-richtext mt-4 text-neutral-700 leading-relaxed">
+          {{ props.data.text | raw }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>

@@ -1,42 +1,23 @@
 {% extends "_layouts/_layout-base.twig" %}
 
 {% block body %}
-  <ul class="nav">
-    {% set es = craft.entries.all() %}
-    {% for e in es %}
-      <li>
-        <a href="{{ e.getUrl() }}">{{ e.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-  <h1>{{ entry.title }}</h1>
+  {{ include('_components/navigation.twig') }}
 
-  <div class="box1"></div>
-  <div class="box2"></div>
-  <div class="box1"></div>
-  <div class="box2"></div>
-  <div class="box1"></div>
-  <div class="box2"></div>
-  <div class="box1"></div>
-  <div class="box2"></div>
-  <style>
-    .box1 {
-      width: 100%;
-      height: 600px;
-      background-color: #0d9488;
-    }
+  {% llmify %}
+    {{ include('_components/hero.twig', {
+      data: {
+        headline: entry.hero.headline ?? entry.title ?? '',
+        text: entry.hero.text ?? '',
+        image: entry.hero.image.eagerly().one() ?? null,
+      }
+    }, with_context = false) }}
 
-    .box2 {
-      width: 100%;
-      height: 600px;
-      background-color: #1f5fea;
-    }
+    {{ include('_components/builder.twig', {
+      data: {
+        builder: entry.pageBuilder ?? null,
+      }
+    }, with_context = false) }}
+  {% endllmify %}
 
-    .nav {
-      width: 100%;
-      display: flex;
-      gap: 16px;
-      list-style-type: none;
-    }
-  </style>
+  {{ include('_components/footer.twig') }}
 {% endblock %}

@@ -1,0 +1,46 @@
+{# >>> Comp Settings #}
+{% set compDefaults = {
+  data: {
+    name: 'c-builder',
+    builder: null,
+  },
+} %}
+{# >>> Merge data / classes / variansts (optional) #}
+{% set props = {
+  data: data is defined and data is iterable ? compDefaults.data | merge(data) : compDefaults.data,
+} %}
+
+{% if props.data.builder %}
+  {% set blocks = props.data.builder.eagerly().all() %}
+
+  {% if blocks | length %}
+    <div class="{{ props.data.name }}">
+      {% for block in blocks %}
+        {% switch block.type.handle %}
+          {% case 'text' %}
+            {{ include('_components/text.twig', {
+              data: {
+                text: block.text ?? '',
+              }
+            }, with_context = false) }}
+
+          {% case 'image' %}
+            {{ include('_components/image.twig', {
+              data: {
+                image: block.image.eagerly().one() ?? null,
+              }
+            }, with_context = false) }}
+
+          {% case 'imageText' %}
+            {{ include('_components/imageText.twig', {
+              data: {
+                headline: block.headline ?? '',
+                text: block.text ?? '',
+                image: block.asset.eagerly().one() ?? null,
+              }
+            }, with_context = false) }}
+        {% endswitch %}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endif %}

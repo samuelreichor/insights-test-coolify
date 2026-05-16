@@ -6,23 +6,45 @@
  * list of the available settings in vendor/craftcms/cms/src/config/GeneralConfig.php.
  *
  * @see \craft\config\GeneralConfig
- * @link https://craftcms.com/docs/5.x/reference/config/general.html
  */
 
-use craft\config\GeneralConfig;
-use craft\helpers\App;
+return [
+    '*' => [
+        'aliases' => [
+            '@webroot' => getenv('CRAFT_WEB_ROOT'),
+        ],
+        'allowAdminChanges' => false,
+        'allowedFileExtensions' => ['jpg', 'png', 'jpeg', 'webP', 'gif', 'svg', 'mp4', 'pdf', 'zip', 'csv'],
+        'allowUpdates' => false,
+        'cacheDuration' => false,
+        'defaultTokenDuration' => 'P2W',
+        'defaultSearchTermOptions' => [
+            'subLeft' => true,
+            'subRight' => true,
+        ],
+        'devMode' => true,
+        'disallowRobots' => true,
+        'generateTransformsBeforePageLoad' => true,
+        'limitAutoSlugsToAscii' => true,
+        'maxRevisions' => 5,
+        'omitScriptNameInUrls' => true,
+        'runQueueAutomatically' => false,
+        'securityKey' => getenv('CRAFT_SECURITY_KEY'),
+    ],
 
-return GeneralConfig::create()
-    // Set the default week start day for date pickers (0 = Sunday, 1 = Monday, etc.)
-    ->defaultWeekStartDay(1)
-    // Prevent generated URLs from including "index.php"
-    ->omitScriptNameInUrls()
-    // Preload Single entries as Twig variables
-    ->preloadSingles()
-    // Prevent user enumeration attacks
-    ->preventUserEnumeration()
-    // Set the @webroot alias so the clear-caches command knows where to find CP resources
-    ->aliases([
-        '@webroot' => dirname(__DIR__) . '/web',
-    ])
-;
+    'production' => [
+        'disallowRobots' => false,
+        'devMode' => false,
+    ],
+
+    'dev' => [
+        'devMode' => true,
+        'allowAdminChanges' => true,
+        'allowUpdates' => true,
+        'defaultCookieDomain' => '.kta.ddev.site',
+        'enableTemplateCaching' => false,
+        'testToEmailAddress' => getenv('TEST_EMAIL_ADDRESS') ?: null,
+        'rememberedUserSessionDuration' => 'P1Y',
+        'runQueueAutomatically' => true,
+    ],
+];

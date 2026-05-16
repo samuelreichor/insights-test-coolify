@@ -1,0 +1,40 @@
+{# >>> Comp Settings #}
+{% set compDefaults = {
+  data: {
+    name: 'c-hero',
+    headline: '',
+    text: '',
+    image: null,
+  },
+} %}
+{# >>> Merge data / classes / variansts (optional) #}
+{% set props = {
+  data: data is defined and data is iterable ? compDefaults.data | merge(data) : compDefaults.data,
+} %}
+
+<section class="{{ props.data.name }} bg-neutral-50 py-16 md:py-24">
+  <div class="mx-auto max-w-5xl px-6 text-center">
+    {% if props.data.headline %}
+      <h1 class="text-4xl md:text-6xl font-bold tracking-tight text-neutral-900">
+        {{ props.data.headline }}
+      </h1>
+    {% endif %}
+
+    {% if props.data.text %}
+      <div class="c-richtext mt-6 text-lg md:text-xl text-neutral-700 leading-relaxed">
+        {{ props.data.text | raw }}
+      </div>
+    {% endif %}
+
+    {% if props.data.image %}
+      <div class="mt-10">
+        <img
+          src="{{ props.data.image.getUrl() }}"
+          alt="{{ props.data.image.alt ?? props.data.headline }}"
+          class="mx-auto rounded-xl shadow-lg w-full max-w-3xl h-auto"
+          loading="eager"
+        >
+      </div>
+    {% endif %}
+  </div>
+</section>

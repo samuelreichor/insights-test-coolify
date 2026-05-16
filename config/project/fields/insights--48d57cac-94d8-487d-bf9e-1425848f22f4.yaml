@@ -1,0 +1,10 @@
+columnSuffix: null
+handle: insights
+instructions: null
+name: Insights
+searchable: false
+settings:
+  range: 30d
+translationKeyFormat: null
+translationMethod: language
+type: samuelreichor\insights\fields\InsightsField

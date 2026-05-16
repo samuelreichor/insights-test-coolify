@@ -2,6 +2,7 @@
   "name": "coolify-craft-test",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build"
@@ -11,10 +12,13 @@
   "description": "",
   "dependencies": {
     "@rollup/plugin-node-resolve": "^16.0.1",
-    "mitt": "^3.0.1"
+    "@tailwindcss/vite": "^4.3.0",
+    "mitt": "^3.0.1",
+    "tailwindcss": "^4.3.0",
+    "vite-plugin-restart": "^2.0.0"
   },
   "devDependencies": {
-    "vite": "5.4.11",
+    "vite": "^7",
     "vite-plugin-mkcert": "^1.17.8"
   }
 }

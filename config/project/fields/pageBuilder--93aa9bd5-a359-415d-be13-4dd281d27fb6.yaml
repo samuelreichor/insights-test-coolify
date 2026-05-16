@@ -1,0 +1,45 @@
+columnSuffix: null
+handle: pageBuilder
+instructions: null
+name: 'Page Builder'
+searchable: false
+settings:
+  createButtonLabel: 'New Block'
+  defaultIndexViewMode: cards
+  enableVersioning: false
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - a6de8a2c-3952-4831-88b7-28d32607dfd3 # Image Text
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - e48e424a-5983-4af3-90ce-9dbeb963e7d8 # Text
+        -
+          - group
+          - General
+    -
+      __assoc__:
+        -
+          - uid
+          - 0328d00b-6a77-41d7-bcd7-e4bb72ba6ca1 # Image
+        -
+          - group
+          - General
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

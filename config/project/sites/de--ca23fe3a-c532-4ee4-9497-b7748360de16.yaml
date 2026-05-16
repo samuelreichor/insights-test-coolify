@@ -1,5 +1,5 @@
-baseUrl: $PRIMARY_URL_DE
-enabled: true
+baseUrl: $PRIMARY_SITE_URL/de
+enabled: '1'
 handle: de
 hasUrls: true
 language: de-DE

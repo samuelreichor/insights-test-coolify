@@ -1,0 +1,17 @@
+<nav class="bg-neutral-900 px-6 py-4">
+  <ul class="mx-auto max-w-6xl flex flex-wrap gap-x-6 gap-y-2 text-white text-sm font-medium">
+    {% set navEntries = craft.entries.orderBy('postDate').all() %}
+    {% for navEntry in navEntries %}
+      {% if navEntry.getUrl() and navEntry.title %}
+        <li>
+          <a
+            href="{{ navEntry.getUrl() }}"
+            class="hover:text-neutral-300 transition-colors {{ navEntry.id == entry.id ? 'underline underline-offset-4' : '' }}"
+          >
+            {{ navEntry.title }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>

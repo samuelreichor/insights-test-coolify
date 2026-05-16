@@ -1,3 +1,4 @@
+allowLineBreaksInTitles: false
 color: null
 description: 'Build pages with this entry type'
 fieldLayouts:
@@ -35,9 +36,76 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2026-05-16T10:08:15+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 1d777393-442d-4dbb-9260-763380aca9fd
+            userCondition: null
+          -
+            dateAdded: '2026-05-16T10:08:15+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 7d620754-699e-49a3-91b2-07eeee6c8d5d # Hero
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 69004fef-733b-4d94-b68b-931c27588eea
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2026-05-16T10:08:15+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: ae26cec5-3dca-4b04-ac2c-83370ae299de
+            userCondition: null
+          -
+            dateAdded: '2026-05-16T10:08:15+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 93aa9bd5-a359-415d-be13-4dd281d27fb6 # Page Builder
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 37cbfcf2-697e-4c8b-ba58-5450c8952ee2
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 884e9481-16a3-41f7-be26-8ca0cd6c8448
         userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-05-16T10:08:15+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 8e2e227c-4a0a-4eaa-8e00-c61a5a34c047 # LLM Settings
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 93e05fe1-3356-4e43-add5-f12a4922f3dc
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'LLM Settings'
+        uid: 6e7d9acb-d1d5-4885-87af-9ebbf76d9597
+        userCondition: null
+    thumbFieldKey: null
 handle: default_pagebuilder
 hasTitleField: true
 icon: null
@@ -49,3 +117,4 @@ slugTranslationMethod: language
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: language
+uiLabelFormat: '{title}'

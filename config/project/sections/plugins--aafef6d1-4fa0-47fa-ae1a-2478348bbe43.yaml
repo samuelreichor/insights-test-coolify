@@ -3,26 +3,25 @@ enableVersioning: true
 entryTypes:
   -
     uid: cd17b7ef-0947-48a6-8b71-1e366fa396e8 # Default Pagebuilder
-  -
-    uid: 4cc91330-523b-4d54-911e-42c778da37d6 # Default Contentbuilder
-handle: blog
+handle: plugins
 maxAuthors: 2
-name: Blog
+minAuthors: 1
+name: Plugins
 previewTargets:
   -
     label: 'Primary entry page'
     refresh: '1'
     urlFormat: '{url}'
-propagationMethod: language
+propagationMethod: all
 siteSettings:
   1723a27b-575b-4f9f-86ce-78e2bf638980: # English
     enabledByDefault: true
     hasUrls: true
     template: pages/_entry.twig
-    uriFormat: 'blog/{slug}'
+    uriFormat: 'plugins/{slug}'
   ca23fe3a-c532-4ee4-9497-b7748360de16: # Deutsch
     enabledByDefault: true
     hasUrls: true
     template: pages/_entry.twig
-    uriFormat: 'blog/{slug}'
+    uriFormat: 'plugins/{slug}'
 type: channel

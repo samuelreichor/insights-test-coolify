@@ -2,11 +2,10 @@ defaultPlacement: beginning
 enableVersioning: true
 entryTypes:
   -
-    uid: 4cc91330-523b-4d54-911e-42c778da37d6 # Default Contentbuilder
-  -
     uid: cd17b7ef-0947-48a6-8b71-1e366fa396e8 # Default Pagebuilder
 handle: pages
 maxAuthors: 10
+minAuthors: 1
 name: Pages
 previewTargets:
   -

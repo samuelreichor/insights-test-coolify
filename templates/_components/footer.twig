@@ -1,0 +1,50 @@
+{% set newsEntries = craft.entries.section('news').orderBy('postDate desc').limit(6).all() %}
+{% set pluginEntries = craft.entries.section('plugins').orderBy('postDate desc').limit(6).all() %}
+
+<footer class="bg-black text-neutral-200 mt-24">
+  <div class="mx-auto max-w-6xl px-6 py-12 grid gap-10 md:grid-cols-2 items-start">
+    <div>
+      <p class="text-lg font-semibold text-white">Demo Website for Insights</p>
+    </div>
+
+    <div class="grid grid-cols-2 gap-8 text-sm">
+      <div>
+        <h3 class="text-white font-semibold mb-3 uppercase tracking-wide text-xs">News</h3>
+        {% if newsEntries | length %}
+          <ul class="space-y-2">
+            {% for newsEntry in newsEntries %}
+              {% if newsEntry.getUrl() and newsEntry.title %}
+                <li>
+                  <a href="{{ newsEntry.getUrl() }}" class="hover:text-white transition-colors">
+                    {{ newsEntry.title }}
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="text-neutral-500">No entries</p>
+        {% endif %}
+      </div>
+
+      <div>
+        <h3 class="text-white font-semibold mb-3 uppercase tracking-wide text-xs">Plugins</h3>
+        {% if pluginEntries | length %}
+          <ul class="space-y-2">
+            {% for pluginEntry in pluginEntries %}
+              {% if pluginEntry.getUrl() and pluginEntry.title %}
+                <li>
+                  <a href="{{ pluginEntry.getUrl() }}" class="hover:text-white transition-colors">
+                    {{ pluginEntry.title }}
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="text-neutral-500">No entries</p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</footer>

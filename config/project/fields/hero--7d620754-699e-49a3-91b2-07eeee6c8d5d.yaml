@@ -1,0 +1,111 @@
+columnSuffix: null
+handle: hero
+instructions: null
+name: Hero
+searchable: true
+settings:
+  fieldLayouts:
+    __assoc__:
+      -
+        - e865a15a-0d50-4ea1-a2f9-34988fa6dee7
+        -
+          __assoc__:
+            0:
+              - tabs
+              -
+                -
+                  __assoc__:
+                    0:
+                      - name
+                      - Content
+                    1:
+                      - uid
+                      - 90a66b52-90c4-4d45-a6ce-b3dff199ef6f
+                    4:
+                      - elements
+                      -
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            1:
+                              - handle
+                              - headline
+                            2:
+                              - label
+                              - Headline
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-16T10:00:36+00:00'
+                            9:
+                              - uid
+                              - ca043204-2437-4385-b44f-98cf8e4ac619
+                            12:
+                              - fieldUid
+                              - b74128a9-94f6-47fb-ab71-542d41c9aef7 # Translatable Plain Text
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            1:
+                              - handle
+                              - introText
+                            2:
+                              - label
+                              - 'Intro Text'
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-16T10:03:36+00:00'
+                            9:
+                              - uid
+                              - 46ec9cbb-e324-41c2-8079-201d7dada489
+                            12:
+                              - fieldUid
+                              - 71793969-56db-4c8f-8f9f-044be30fbed5 # Translatable Simple Richtext
+                        -
+                          __assoc__:
+                            0:
+                              - type
+                              - craft\fieldlayoutelements\CustomField
+                            1:
+                              - handle
+                              - image
+                            2:
+                              - label
+                              - Image
+                            6:
+                              - required
+                              - false
+                            7:
+                              - width
+                              - 100
+                            8:
+                              - dateAdded
+                              - '2026-05-16T10:00:36+00:00'
+                            9:
+                              - uid
+                              - 64314a8d-4eba-4265-a6cf-32ad4810e1d4
+                            12:
+                              - fieldUid
+                              - ad47bede-0861-4c8e-8c64-d3f3b557cabf # Asset
+            4:
+              - cardThumbAlignment
+              - end
+  viewMode: grouped
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\ContentBlock

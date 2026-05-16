@@ -1,0 +1,60 @@
+.c-richtext h1,
+.c-richtext h2,
+.c-richtext h3,
+.c-richtext h4 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: #171717;
+}
+
+.c-richtext h1 { font-size: 2rem; }
+.c-richtext h2 { font-size: 1.5rem; }
+.c-richtext h3 { font-size: 1.25rem; }
+.c-richtext h4 { font-size: 1.125rem; }
+
+.c-richtext p {
+  margin-bottom: 1em;
+}
+
+.c-richtext a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.c-richtext a:hover {
+  color: #1d4ed8;
+}
+
+.c-richtext ul,
+.c-richtext ol {
+  margin: 1em 0;
+  padding-left: 1.5rem;
+}
+
+.c-richtext ul { list-style: disc; }
+.c-richtext ol { list-style: decimal; }
+
+.c-richtext li {
+  margin-bottom: 0.25em;
+}
+
+.c-richtext blockquote {
+  border-left: 4px solid #e5e5e5;
+  padding-left: 1rem;
+  margin: 1.5em 0;
+  color: #525252;
+  font-style: italic;
+}
+
+.c-richtext strong { font-weight: 700; }
+.c-richtext em { font-style: italic; }
+
+.c-richtext code {
+  background: #f5f5f5;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}

@@ -3,14 +3,14 @@ enableVersioning: true
 entryTypes:
   -
     uid: cd17b7ef-0947-48a6-8b71-1e366fa396e8 # Default Pagebuilder
-  -
-    uid: 4cc91330-523b-4d54-911e-42c778da37d6 # Default Contentbuilder
 handle: home
 maxAuthors: 1
+minAuthors: 1
 name: Home
 previewTargets:
   -
     label: 'Primary entry page'
+    refresh: '1'
     urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
@@ -20,7 +20,7 @@ siteSettings:
     template: /pages/_entry.twig
     uriFormat: __home__
   ca23fe3a-c532-4ee4-9497-b7748360de16: # Deutsch
-    enabledByDefault: false
+    enabledByDefault: true
     hasUrls: true
     template: /pages/_entry.twig
     uriFormat: __home__

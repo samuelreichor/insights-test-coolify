@@ -41,7 +41,6 @@ return [
         'devMode' => true,
         'allowAdminChanges' => true,
         'allowUpdates' => true,
-        'defaultCookieDomain' => '.kta.ddev.site',
         'enableTemplateCaching' => false,
         'testToEmailAddress' => getenv('TEST_EMAIL_ADDRESS') ?: null,
         'rememberedUserSessionDuration' => 'P1Y',

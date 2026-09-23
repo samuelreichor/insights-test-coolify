@@ -8,7 +8,7 @@
     "nystudio107/craft-vite": "^5.0.2",
     "samuelreichor/craft-genesis": "^1.1.0",
     "samuelreichor/craft-insights": "^1.4.1",
-    "samuelreichor/craft-llmify": "^1.11.0",
+    "samuelreichor/craft-llmify": "^1.12.0",
     "vlucas/phpdotenv": "5.6.1"
   },
   "require-dev": {

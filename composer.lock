@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8bc0623ede0acf6a220b9478009e15f6",
+    "content-hash": "80b9bbbcb0250315f999a25959bae34c",
     "packages": [
         {
             "name": "amphp/amp",
@@ -6225,11 +6225,11 @@
         },
         {
             "name": "samuelreichor/craft-llmify",
-            "version": "1.11.0",
+            "version": "1.12.0",
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/samuelreichor/craft-llmify/zipball/33cce59694822498fff895490b78c6ce63d1f4cf",
-                "reference": "33cce59694822498fff895490b78c6ce63d1f4cf",
+                "url": "https://api.github.com/repos/samuelreichor/craft-llmify/zipball/42145f3a9d87a7673681a4b64b2317a0a1025da8",
+                "reference": "42145f3a9d87a7673681a4b64b2317a0a1025da8",
                 "shasum": ""
             },
             "require": {
@@ -6266,7 +6266,7 @@
                 "docs": "https://samuelreichor.at/libraries/craft-llmify",
                 "rss": "https://github.com/samuelreichor/craft-llmify/releases.atom"
             },
-            "time": "2026-09-07T12:07:47+00:00"
+            "time": "2026-09-23T09:11:12+00:00"
         },
         {
             "name": "seld/cli-prompt",

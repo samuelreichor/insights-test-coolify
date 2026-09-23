@@ -1,4 +1,4 @@
-dateModified: 1790152891
+dateModified: 1790154004
 email:
   fromEmail: sam@gmail.com
   fromName: Coolify
@@ -61,12 +61,16 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: $PLUGIN_LLMIFY
-    schemaVersion: 1.3.1
+    schemaVersion: 1.4.0
     settings:
+      apiToken: null
       autoInjectDiscoveryTag: true
       autoServeMarkdown: true
+      basicAuthPassword: null
+      basicAuthUsername: null
       concurrentRequests: 3
-      enableBotDetection: true
+      enableBotDetection: false
+      enableWebMcp: false
       excludeClasses:
         -
           __assoc__:
@@ -74,6 +78,7 @@ plugins:
               - classes
               - exclude-llmify
       frontMatterInFullTxt: false
+      headlessMode: false
       isEnabled: true
       isRealUrlLlm: false
       markdownConfig:

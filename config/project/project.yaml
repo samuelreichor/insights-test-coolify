@@ -1,4 +1,4 @@
-dateModified: 1790154004
+dateModified: 1791038013
 email:
   fromEmail: sam@gmail.com
   fromName: Coolify
@@ -61,7 +61,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: $PLUGIN_LLMIFY
-    schemaVersion: 1.4.0
+    schemaVersion: 2.0.0
     settings:
       apiToken: null
       autoInjectDiscoveryTag: true

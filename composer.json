@@ -3,12 +3,12 @@
   "prefer-stable": true,
   "require": {
     "php": "^8.2",
-    "craftcms/ckeditor": "^5.7.0",
-    "craftcms/cms": "^5.11.3",
+    "craftcms/ckeditor": "^5.8.0",
+    "craftcms/cms": "^5.11.4",
     "nystudio107/craft-vite": "^5.0.2",
     "samuelreichor/craft-genesis": "^1.1.0",
     "samuelreichor/craft-insights": "^1.4.1",
-    "samuelreichor/craft-llmify": "^1.12.0",
+    "samuelreichor/craft-llmify": "^2.0.0",
     "vlucas/phpdotenv": "5.6.1"
   },
   "require-dev": {

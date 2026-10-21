@@ -2,7 +2,7 @@
   "minimum-stability": "dev",
   "prefer-stable": true,
   "require": {
-    "php": "^8.2",
+    "php": "^8.4",
     "craftcms/ckeditor": "^5.9.0",
     "craftcms/cms": "^5.11.5.1",
     "nystudio107/craft-vite": "^5.0.2",
@@ -23,7 +23,7 @@
     "sort-packages": true,
     "optimize-autoloader": true,
     "platform": {
-      "php": "8.2"
+      "php": "8.4"
     }
   },
   "scripts": {

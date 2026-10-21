@@ -20,7 +20,7 @@ services:
       dockerfile: ./.coolify/Dockerfile # Specifies the path to the Dockerfile
       target: web # Build target stage
       args: # Passes build arguments to the Dockerfile
-        - php_version=8.2 # Sets the PHP version
+        - php_version=8.4 # Sets the PHP version
         - node_version=22 # Sets the Node.js version
     depends_on:
       db:
@@ -34,7 +34,7 @@ services:
       dockerfile: ./.coolify/Dockerfile
       target: queue
       args:
-        - php_version=8.2
+        - php_version=8.4
         - node_version=22
     depends_on:
       db:

@@ -1,6 +1,6 @@
 services:
   db:
-    image: mysql
+    image: mysql:9.7
     environment:
       MYSQL_DATABASE: db # Database name
       MYSQL_USER: db # Database user
